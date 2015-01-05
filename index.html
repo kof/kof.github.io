@@ -92,6 +92,13 @@
             ul {
                 list-style-type: none;
             }
+            @media print {
+                .printable:after {
+                    content: " " attr(href);
+                }
+                a {
+                    text-decoration: none;
+                }
         </style>
     </head>
     <body>
@@ -107,7 +114,7 @@
             <h2>Summary</h2>
             During my career I gathered experiences in both frontend and backend technologies.<br />
 
-            I did a lot of research in javascript performance, rendering and GPU accelerated animations. I wrote web applications which work perfectly on any platform, any browser as well as within <a href="http://cordova.apache.org/" target="_blank">cordova</a>.<br /><br />
+            I did a lot of research in javascript performance, rendering and GPU accelerated animations. I wrote web applications which work perfectly on any platform, any browser as well as within <a href="http://cordova.apache.org" target="_blank">cordova</a>.<br /><br />
 
             Also I am able to create a horizontally scalable stateless architecture using nodejs and mongodb. I did web scrappers, real time messaging, distributed computation, REST API's with versioning.<br /><br />
 
@@ -118,12 +125,12 @@
         <section>
             <h2>Profiles</h2>
             <ul>
-                <li><a target="_blank" href="https://github.com/kof">Github</a></li>
-                <li><a target="_blank" href="https://twitter.com/oleg008">Twitter</a></li>
-                <li><a target="_blank" href="https://linkedin.com/in/olegslobodskoi">Linkedin</a></li>
-                <li><a target="_blank" href="https://xing.com/profile/Oleg_Slobodskoi">Xing</a></li>
-                <li><a target="_blank" href="https://facebook.com/oleg.slobodskoi">Facebook</a></li>
-                <li><a target="_blank" href="https://medium.com/@oleg008">Medium</a></li>
+                <li><a class="printable" target="_blank" href="https://github.com/kof">Github</a></li>
+                <li><a class="printable" target="_blank" href="https://twitter.com/oleg008">Twitter</a></li>
+                <li><a class="printable" target="_blank" href="https://linkedin.com/in/olegslobodskoi">Linkedin</a></li>
+                <li><a class="printable" target="_blank" href="https://xing.com/profile/Oleg_Slobodskoi">Xing</a></li>
+                <li><a class="printable" target="_blank" href="https://facebook.com/oleg.slobodskoi">Facebook</a></li>
+                <li><a  class="printable" target="_blank" href="https://medium.com/@oleg008">Medium</a></li>
             </ul>
         </section>
         <section>
@@ -139,35 +146,35 @@
                 <li><a target="_blank" href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a></li>
                 <li><a target="_blank" href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a></li>
                 <li><a target="_blank" href="https://en.wikipedia.org/wiki/HTML5">HTML5</a></li>
-                <li><a target="_blank" href="https://backbonejs.org/">Backbone</a></li>
-                <li><a target="_blank" href="https://angularjs.org/">Angular</a></li>
+                <li><a target="_blank" href="https://backbonejs.org">Backbone</a></li>
+                <li><a target="_blank" href="https://angularjs.org">Angular</a></li>
                 <li><a target="_blank" href="https://famo.us">Famo.us</a></li>
-                <li><a target="_blank" href="https://cordova.apache.org/">Cordova</a></li>
+                <li><a target="_blank" href="https://cordova.apache.org">Cordova</a></li>
             </ul>
         </section>
         <section>
             <h2>Favorite projects</h2>
             <ul>
-                <li><a target="_blank" href="https://github.com/kof/jss">Dynamic stylesheets for web components.</a></li>
-                <li><a target="_blank" href="https://kof.github.io/diff-renderer/">DiffRenderer - smart innerHTML for your views.</a></li>
-                <li><a target="_blank" href="https://github.com/kof/animation-frame">AnimationFrame - the best request animation frame shim.</a></li>
-                <li><a target="_blank" href="https://github.com/kof/qunit">QUnit test runner for nodejs</a></li>
-                <li><a target="_blank" href="https://github.com/kof/simpleio">Simpleio - http based real time messaging backed by MongoDB.</a></li>
-                <li><a target="_blank" href="https://github.com/scttnlsn/mubsub">Pub/sub for Node.js and MongoDB</a></li>
-                <li><a target="_blank" href="https://github.com/kof/node-mongo-queue">Node.js job queue backed by MongoDB.</a></li>
+                <li><a class="printable" target="_blank" href="https://github.com/kof/jss">Dynamic stylesheets for web components.</a></li>
+                <li><a class="printable" target="_blank" href="https://kof.github.io/diff-renderer">DiffRenderer - smart innerHTML for your views.</a></li>
+                <li><a class="printable" target="_blank" href="https://github.com/kof/animation-frame">AnimationFrame - the best request animation frame shim.</a></li>
+                <li><a class="printable" target="_blank" href="https://github.com/kof/qunit">QUnit test runner for nodejs</a></li>
+                <li><a class="printable" target="_blank" href="https://github.com/kof/simpleio">Simpleio - http based real time messaging backed by MongoDB.</a></li>
+                <li><a class="printable" target="_blank" href="https://github.com/scttnlsn/mubsub">Pub/sub for Node.js and MongoDB</a></li>
+                <li><a class="printable" target="_blank" href="https://github.com/kof/node-mongo-queue">Node.js job queue backed by MongoDB.</a></li>
             </ul>
         </section>
         <section>
             <h2>Professional experience (9 Years)</h2>
 
-            <h3>10.2014 - 1.2015, <a target="_blank" href="http://www.sensorberg.com/">Sensorberg</a></h3>
+            <h3>10.2014 - 1.2015, <a class="printable" target="_blank" href="http://www.sensorberg.com">Sensorberg</a></h3>
             <h4>Frontend Software Engineer</h4>
 
             Sensorberg as a (i)Beacon infrastructure provider enables any company to convert their apps into iBeacon aware apps. The iBeacon technology allows all App-owners the digital Handshake with its direct target audiences. It connects online- and offline world and opens exceedingly varied potentials at the Point of Interest.<br /><br />
             I have been working on the frontend of the beacon management system. The system allows its users to manage beacons, applications, create advertisement campaigns, configure proximity notifications, display statistics etc.<br />
             Used technologies: angular, bootstrap.
 
-            <h3>11.2013 - 09.2014, <a target="_blank" href="https://kiipost.com">Kiipost</a></h3>
+            <h3>11.2013 - 09.2014, <a class="printable" target="_blank" href="https://kiipost.com">Kiipost</a></h3>
             <h4>Founder, Software Engineer</h4>
 
             Kiipost is a mobile app which allows users to stay in the know about relevant updates, highly related to things they share online.<br /><br />
@@ -175,11 +182,11 @@
             My backend aggregates 30k RSS feeds to provide updates to the user. I have created a tool called "extractor", which provides functionality similar to <a href="http://embed.ly/extract">embedly</a>. Backend is written using latest nodejs version, leveraging generators.<br />
             I use twitter api to access users tweets. I analyze users links, extract keywords, entities and images, I use readability algorithm to extract the right content. I created an algorithm to extract the most important keywords from articles.<br /><br />
 
-            <a target="_blank" href="https://github.com/kof/kiipost">I have open sourced the code of this projects.</a><br /><br />
+            <a class="printable" target="_blank" href="https://github.com/kof/kiipost">I have open sourced the code of this projects.</a><br /><br />
 
             Tried, failed, learned.
 
-            <h3>12.2011 - 10.2013, <a target="_blank" href="https://skim.com">Skim</a></h3>
+            <h3>12.2011 - 10.2013, <a class="printable" target="_blank" href="https://skim.com">Skim</a></h3>
             <h4>Software Engineer</h4>
 
             Created the backend service as well as web frontend. Backend is done on top of heroku's stateless infrastructure. It provides HTTP API for web and mobile frontends. I used nodejs and mongodb on the backend, backbone, jquery and lots of other libraries on frontend. Some of challenging tasks were: scalable candidates calculation, realtime communication, facebook integration, horizontal scale and constantly changing requirements.<br /><br />
@@ -188,7 +195,7 @@
 
             Skim connects you with people around you. If the interest is mutual, we let you know on the spot. Life's a game – level up!
 
-            <h3>10.2011 - 11.2011, <a target="_blank" href="https://audiencescience.com">AudienceScience</a></h3>
+            <h3>10.2011 - 11.2011, <a class="printable" target="_blank" href="https://audiencescience.com">AudienceScience</a></h3>
             <h4>UX Engineer</h4>
 
             Refactored the UI for campaigns creation. Reduced amount of code by factor 2.<br /><br />
@@ -201,14 +208,14 @@
             Tried. Failed to build a team. Learned a lot.<br />
             Used nodejs, mongodb, backbone, jquery.
 
-            <h3>10.2008 - 10.2010, <a target="_blank" href="https://jimdo.com">Jimdo</a></h3>
+            <h3>10.2008 - 10.2010, <a class="printable" target="_blank" href="https://jimdo.com">Jimdo</a></h3>
             <h4>Javascript Engineer.</h4>
             I was leading the company's frontend development, created the complete architecture, dozens of high quality and high performance jquery plugins. It was a challenging job because company was growing very fast (from 500k to 3mio users). Within 2 years I have completely refactored the old code base, ported it from prototype.js to jquery, did huge amount of  load and runtime performance optimizations.
 
             <br /><br />
             Jimdo offers a free website creator that anyone can use. In just a few minutes and without any technical knowledge, everyone can create a place on the Internet – complete with online store, blog, photo galleries, YouTube videos and much more.
 
-            <h3>01.2008 - 10.2008, <a target="_blank" href="https://mandarin-medien.de">Mandarin Medien</a></h3>
+            <h3>01.2008 - 10.2008, <a class="printable" target="_blank" href="https://mandarin-medien.de">Mandarin Medien</a></h3>
             <h4>Frontend developer.</h4>
             I was developing high performance UI components as jquery plugins using javascript, css, html for company's own CMS. To name a few: Filemanager, WindowEngine, Tree, Tooltip, Lightbox, Image Cropper.
 
