@@ -87,6 +87,9 @@
                 list-style-type: none;
             }
             @media print {
+                html {
+                    font-size: 11px;
+                }
                 .printable:after {
                     content: " " attr(href);
                 }
@@ -95,6 +98,7 @@
                 }
                 .avatar {
                     border: none;
+                    box-shadow: none;
                 }
             }
         </style>
