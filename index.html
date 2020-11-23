@@ -132,24 +132,22 @@
       html {
         font-size: 14px;
       }
-
-      .printable:after {
-        content: " "attr(href);
-      }
-
       a {
         text-decoration: none;
       }
-
+      .collapsed {
+        max-height: auto;
+      }
       .avatar {
         border: none;
         box-shadow: none;
       }
-
       .socials .printable {
         display: block;
       }
-
+      .printable:after {
+        content: " "attr(href);
+      }      
       .read-more {
         display: none;
       }
@@ -233,6 +231,7 @@
       <h4>Senior JavaScript Engineer</h4>
 
       Webflow is a tool for designers and makers that allows them to build a fully custom production-ready site that includes the designer, CMS, E-Commerce, and more.
+      <br /><br />
       My area is the designer. I am part of the engineering team building the UI that is used to build a UI:) I worked on the Style Engine behind the designer that is 
       responsible for styling elements on the canvas as well as producing production-ready CSS. Currently, I am working on the componentization effort that allows 
       users to reuse elements on the canvas across the project on a new level, slowly turning Webflow Designer into a platform where Freelancers and Organizations can 
