@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <title>Oleg Isonen</title>
@@ -102,17 +101,18 @@
 
     .read-more {
       margin-top: 5rem;
-      display: block;
+      display: none;
     }
 
     .cv {
       overflow: hidden;
-      transition: max-height 1s;
-      max-height: 6000px;
     }
 
-    .collapsed {
-      max-height: 0;
+    .collapsed .cv {
+      display: none;
+    }
+    .collapsed .read-more {
+      display: block;
     }
 
     .avatar {
@@ -139,7 +139,6 @@
       display: inline;
     }
 
-
     @media print {
       html {
         font-size: 14px;
@@ -147,8 +146,15 @@
       a {
         text-decoration: none;
       }
-      .collapsed {
-        max-height: none;
+      header {
+        page-break-after: always;
+      }
+      article {
+        page-break-before: auto;
+        page-break-inside: avoid;
+      }
+      .collapsed .cv {
+        display: block;
       }
       .avatar {
         border: none;
@@ -167,7 +173,7 @@
   </style>
 </head>
 
-<body>
+<body class="collapsed">
   <header>
     <img class="surface avatar" src="https://avatars0.githubusercontent.com/u/52824?v=3&s=300" />
     <h1>Oleg Isonen</h1>
@@ -189,13 +195,13 @@
       though is Architecture, because of how it impacts the entire organization.
       Architecture is what lets organizations collaborate and scale as well as optimize local performance.<br /><br />
       I value readability and maintainability, because nothing makes me happier than making the future engineers enjoy working with my code because of its meaningful semantics, ease of change and removal as well as testability.<br /><br />
-      I like to work on tools, which improve the Developer Experience and that is why I invest in Open Source regularly.
+      I like to work on tools, which improve the Developer Experience and that is why I invest in Open Source.
     </section>
     <a href="" class="read-more">Read more…</a>
   </header>
   <a class="surface contact"></a>
 
-  <div class="cv collapsed">
+  <div class="cv">
     <section class="tech-stack">
       <h2>Tech Stack</h2>
       <ul>
@@ -217,6 +223,7 @@
     <section>
       <h2>Open Source Projects</h2>
       <h3>Current</h3>
+
       <ul>
         <li><a class="printable" target="_blank" href="https://github.com/cssinjs/jss">JSS is an authoring tool
             for CSS which uses JavaScript as a host language. </a></li>
@@ -239,115 +246,124 @@
     </section>
     <section>
       <h2>Professional Experience</h2>
+      <article>
+        <h3>01.10.2018 - present | <a class="printable" target="_blank" href="https://webflow.com/">Webflow</a></h3>
+        <h4>Senior JavaScript Engineer</h4>
 
-      <h3>01.10.2018 - present | <a class="printable" target="_blank" href="https://webflow.com/">Webflow</a></h3>
-      <h4>Senior JavaScript Engineer</h4>
+        Webflow is a tool for designers and makers that allows them to build a fully custom production-ready site that includes the designer, CMS, E-Commerce, and more.
+        <br /><br />
+        My area is the designer. I am part of the engineering team building the UI that is used to build a UI:) I worked on the Style Engine behind the designer that is
+        responsible for styling elements on the canvas as well as producing production-ready CSS. Currently, I am working on the componentization effort that allows
+        users to reuse elements on the canvas across the project on a new level, slowly turning Webflow Designer into a platform where Freelancers and Organizations can
+        offer reusable components to 3rd parties.
+      </article>
+      <article>
+        <h3>01.04.2018 - 31.08.2018 | <a class="printable" target="_blank" href="https://ebaytech.berlin/">Ebay
+            Classifieds MoVe</a></h3>
+        <h4>Software Architect JavaScript</h4>
 
-      Webflow is a tool for designers and makers that allows them to build a fully custom production-ready site that includes the designer, CMS, E-Commerce, and more.
-      <br /><br />
-      My area is the designer. I am part of the engineering team building the UI that is used to build a UI:) I worked on the Style Engine behind the designer that is
-      responsible for styling elements on the canvas as well as producing production-ready CSS. Currently, I am working on the componentization effort that allows
-      users to reuse elements on the canvas across the project on a new level, slowly turning Webflow Designer into a platform where Freelancers and Organizations can
-      offer reusable components to 3rd parties.
+        MoVe is a secret new Ebay Classifieds Motors Vertical company.<br /><br />
+        My role is to align 4 Web Front-End teams with architectural choices and ensure the quality while moving
+        fast and aligned with the release plan.<br />
+        During that time I managed to introduce a new "Feature Driven Architecture" to the teams, wrote a number of
+        ADRs and articles, created POCs for the architecture and GraphQL API Gateway.
+      </article>
+      <article>
+        <h3>01.02.2015 - 01.02.2018 | <a class="printable" target="_blank" href="https://chatgrape.com">Chatgrape</a></h3>
+        <h4>Lead Front-End Engineer</h4>
 
-      <h3>01.04.2018 - 31.08.2018 | <a class="printable" target="_blank" href="https://ebaytech.berlin/">Ebay
-          Classifieds MoVe</a></h3>
-      <h4>Software Architect JavaScript</h4>
+        Smart messaging for big businesses.<br />
+        Secure enterprise communication with integrations for all business services.
+        On-premise or in the cloud. <br /><br />
 
-      MoVe is a secret new Ebay Classifieds Motors Vertical company.<br /><br />
-      My role is to align 4 Web Front-End teams with architectural choices and ensure the quality while moving
-      fast and aligned with the release plan.<br />
-      During that time I managed to introduce a new "Feature Driven Architecture" to the teams, wrote a number of
-      ADRs and articles, created POCs for the architecture and GraphQL API Gateway.
+        The web application is built using technologies like React/Redux, JSS and Electron. It uses a fully
+        virtualized messages history rendering by leveraging <a href="https://github.com/bvaughn/react-virtualized">react-virtualized</a>
+        and though it provides a truly infinite scrolling on the web platform.
+        Application is fully decoupled through React components, Redux and JSS. It works like a native application
+        on Windows as well as on MacOS thanks to Electron. Also, it has an installer for Windows. It performs well
+        and has low maintenance footprint.
+      </article>
+      <article>
+        <h3>11.2013 - 09.2014 | <a class="printable" target="_blank" href="https://kiipost.com">Kiipost</a></h3>
+        <h4>Founder, Software Engineer</h4>
 
-      <h3>01.02.2015 - 01.02.2018 | <a class="printable" target="_blank" href="https://chatgrape.com">Chatgrape</a></h3>
-      <h4>Lead Front-End Engineer</h4>
+        Kiipost is a mobile app which allows users to stay in the know about relevant updates, highly related to
+        things they share online.<br /><br />
+        I worked on an MVP, a mobile app built with <a target="_blank" href="https://famo.us">famo.us</a>. The app
+        is working cross platform, it is fully responsive on the level of native apps.<br /><br />
+        My Back-end aggregates 30k RSS feeds to provide updates to the user. I have created a tool called
+        "extractor", which provides functionality similar to <a href="http://embed.ly/extract">embedly</a>. Backend
+        is written using latest Node.js version, leveraging generators.<br />
+        I use twitter API to access users tweets. I analyze users links, extract keywords, entities and images, I
+        use readability algorithm to extract the right content. I created an algorithm to extract the most
+        important keywords from articles.<br /><br />
 
-      Smart messaging for big businesses.<br />
-      Secure enterprise communication with integrations for all business services.
-      On-premise or in the cloud. <br /><br />
+        <a class="printable" target="_blank" href="https://github.com/kof/kiipost">I have open sourced the code of
+          this projects</a><br /><br />
 
-      The web application is built using technologies like React/Redux, JSS and Electron. It uses a fully
-      virtualized messages history rendering by leveraging <a href="https://github.com/bvaughn/react-virtualized">react-virtualized</a>
-      and though it provides a truly infinite scrolling on the web platform.
-      Application is fully decoupled through React components, Redux and JSS. It works like a native application
-      on Windows as well as on MacOS thanks to Electron. Also, it has an installer for Windows. It performs well
-      and has low maintenance footprint.
+        Tried, failed, learned.
+      </article>
+      <article>
+        <h3>12.2011 - 10.2013 | <a class="printable" target="_blank" href="https://skim.com">Skim</a></h3>
+        <h4>Software Engineer</h4>
 
-      <h3>11.2013 - 09.2014 | <a class="printable" target="_blank" href="https://kiipost.com">Kiipost</a></h3>
-      <h4>Founder, Software Engineer</h4>
+        Created the backend service as well as web Front-End. Backend is done on top of Heroku's stateless
+        infrastructure. It provides HTTP API for the web and mobile Front-End for Android and iOS. I used Node.js
+        and MongoDB on the backend, backbone, jQuery and lots of other libraries on Front-End. Some of the
+        challenging tasks were: scalable candidates calculation, real-time communication, Facebook integration,
+        horizontal scale and constantly changing requirements.<br /><br />
 
-      Kiipost is a mobile app which allows users to stay in the know about relevant updates, highly related to
-      things they share online.<br /><br />
-      I worked on an MVP, a mobile app built with <a target="_blank" href="https://famo.us">famo.us</a>. The app
-      is working cross platform, it is fully responsive on the level of native apps.<br /><br />
-      My Back-end aggregates 30k RSS feeds to provide updates to the user. I have created a tool called
-      "extractor", which provides functionality similar to <a href="http://embed.ly/extract">embedly</a>. Backend
-      is written using latest Node.js version, leveraging generators.<br />
-      I use twitter API to access users tweets. I analyze users links, extract keywords, entities and images, I
-      use readability algorithm to extract the right content. I created an algorithm to extract the most
-      important keywords from articles.<br /><br />
+        I was the first employee of this new social dating platform. Our vision was to create a platform where
+        people learn each other in a playful way, with no shame to share it.<br />
 
-      <a class="printable" target="_blank" href="https://github.com/kof/kiipost">I have open sourced the code of
-        this projects</a><br /><br />
+        Skim connects you with people around you. If the interest is mutual, we let you know on the spot. Life's a
+        game – level up!
+      </article>
+      <article>
+        <h3>10.2011 - 11.2011 | <a class="printable" target="_blank" href="https://audiencescience.com">AudienceScience</a></h3>
+        <h4>UX Engineer</h4>
 
-      Tried, failed, learned.
+        Refactored the UI for campaigns creation. Reduced amount of code by factor 2.<br /><br />
 
-      <h3>12.2011 - 10.2013 | <a class="printable" target="_blank" href="https://skim.com">Skim</a></h3>
-      <h4>Software Engineer</h4>
+        AudienceScience is transforming digital advertising from complex to simple, from murky to fully
+        transparent, and from wasteful to extremely efficient, all with the goal of generating the best digital
+        advertising performance for the advertiser, and the consumer.
+      </article>
+      <article>
+        <h3>11.2010 - 09.2011 | Stealth mode startup</h3>
+        <h4>Founder, full stack Software Engineer</h4>
 
-      Created the backend service as well as web Front-End. Backend is done on top of Heroku's stateless
-      infrastructure. It provides HTTP API for the web and mobile Front-End for Android and iOS. I used Node.js
-      and MongoDB on the backend, backbone, jQuery and lots of other libraries on Front-End. Some of the
-      challenging tasks were: scalable candidates calculation, real-time communication, Facebook integration,
-      horizontal scale and constantly changing requirements.<br /><br />
+        Tried. Failed to build a team. Learned a lot.<br />
+        Used Node.js, MongoDB, Backbone, jQuery.
+      </article>
+      <article>
+        <h3>10.2008 - 10.2010 | <a class="printable" target="_blank" href="https://jimdo.com">Jimdo</a></h3>
+        <h4>JavaScript Engineer</h4>
+        I was leading the company's Front-End development, created the complete architecture, dozens of high
+        quality and high performance jQuery plugins. It was a challenging job because the company was growing very
+        fast (from 500k to 3mio users). Within 2 years I have completely refactored the old code base, ported it
+        from prototype.js to jQuery, did a huge amount of load and runtime performance optimizations.
 
-      I was the first employee of this new social dating platform. Our vision was to create a platform where
-      people learn each other in a playful way, with no shame to share it.<br />
-
-      Skim connects you with people around you. If the interest is mutual, we let you know on the spot. Life's a
-      game – level up!
-
-      <h3>10.2011 - 11.2011 | <a class="printable" target="_blank" href="https://audiencescience.com">AudienceScience</a></h3>
-      <h4>UX Engineer</h4>
-
-      Refactored the UI for campaigns creation. Reduced amount of code by factor 2.<br /><br />
-
-      AudienceScience is transforming digital advertising from complex to simple, from murky to fully
-      transparent, and from wasteful to extremely efficient, all with the goal of generating the best digital
-      advertising performance for the advertiser, and the consumer.
-
-      <h3>11.2010 - 09.2011 | Stealth mode startup</h3>
-      <h4>Founder, full stack Software Engineer</h4>
-
-      Tried. Failed to build a team. Learned a lot.<br />
-      Used Node.js, MongoDB, Backbone, jQuery.
-
-      <h3>10.2008 - 10.2010 | <a class="printable" target="_blank" href="https://jimdo.com">Jimdo</a></h3>
-      <h4>JavaScript Engineer</h4>
-      I was leading the company's Front-End development, created the complete architecture, dozens of high
-      quality and high performance jQuery plugins. It was a challenging job because the company was growing very
-      fast (from 500k to 3mio users). Within 2 years I have completely refactored the old code base, ported it
-      from prototype.js to jQuery, did a huge amount of load and runtime performance optimizations.
-
-      <br /><br />
-      Jimdo offers a free website creator that anyone can use. In just a few minutes and without any technical
-      knowledge, everyone can create a place on the Internet – complete with online store, blog, photo galleries,
-      YouTube videos and much more.
-
-      <h3>01.2008 - 10.2008 | <a class="printable" target="_blank" href="https://mandarin-medien.de">Mandarin
-          Medien</a></h3>
-      <h4>Front-End developer</h4>
-      I was developing high performance UI components as jQuery plugins using JavaScript, CSS, HTML for company's
-      own CMS. To name a few: Filemanager, WindowEngine, Tree, Tooltip, Lightbox, Image Cropper.
-
-      <h3>01.2006 - 11.2007 | <a target="_blank" href="https://mandarin-medien.de">Mandarin Medien</a></h3>
-      <h4>Web developer</h4>
-      I was developing cross platform middle-sized projects using PHP, Smarty, MySql, HTML, CSS, JavaScript. Most
-      of those projects are backed by the company's own CMS.<br /><br />
-
-      Mandarin Medien is a full-service web agency.
-
+        <br /><br />
+        Jimdo offers a free website creator that anyone can use. In just a few minutes and without any technical
+        knowledge, everyone can create a place on the Internet – complete with online store, blog, photo galleries,
+        YouTube videos and much more.
+      </article>
+      <article>
+        <h3>01.2008 - 10.2008 | <a class="printable" target="_blank" href="https://mandarin-medien.de">Mandarin
+            Medien</a></h3>
+        <h4>Front-End developer</h4>
+        I was developing high performance UI components as jQuery plugins using JavaScript, CSS, HTML for company's
+        own CMS. To name a few: Filemanager, WindowEngine, Tree, Tooltip, Lightbox, Image Cropper.
+      </article>
+      <article>
+        <h3>01.2006 - 11.2007 | <a target="_blank" href="https://mandarin-medien.de">Mandarin Medien</a></h3>
+        <h4>Web developer</h4>
+        I was developing cross platform middle-sized projects using PHP, Smarty, MySql, HTML, CSS, JavaScript. Most
+        of those projects are backed by the company's own CMS.
+        <br /><br />
+        Mandarin Medien is a full-service web agency.
+      </article>
     </section>
     <section>
       <h2>Languages</h2>
@@ -370,7 +386,7 @@
       // Touch avatar.
       ; (function () {
         if (!('ontouchstart' in window)) {
-          document.body.className = 'no-touch'
+          document.body.classList.add('no-touch')
           return
         }
         var avatarEl = document.getElementsByClassName('avatar')[0]
@@ -386,9 +402,7 @@
         var readMoreEl = document.getElementsByClassName('read-more')[0]
         readMoreEl.addEventListener('click', function (e) {
           e.preventDefault()
-          readMoreEl.style.display = 'none'
-          var cvEl = document.getElementsByClassName('cv')[0]
-          cvEl.classList.remove('collapsed')
+          document.body.classList.remove('collapsed')
         })
       }())
 
