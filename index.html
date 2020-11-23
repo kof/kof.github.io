@@ -21,6 +21,7 @@
 
     a {
       color: rgba(0, 0, 0, 0.6);
+      font-weight: normal;
     }
 
     a.active,
@@ -38,20 +39,35 @@
     h2 {
       font-size: 1.5em;
       line-height: 2;
-      color: rgba(0, 0, 0, 0.8);
       margin: 1em 0;
+      color: rgba(0, 0, 0, 0.8);
     }
 
     h3 {
       font-size: 1em;
       line-height: 1.5;
       margin: 1em 0;
+      color: rgba(0, 0, 0, 0.8);
     }
 
     h4 {
       font-size: 1em;
       margin: 0;
       line-height: 2;
+    }
+
+    section {
+      margin-top: 3rem;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    header {
+      text-align: center;
     }
 
     .surface {
@@ -68,10 +84,6 @@
       text-decoration: none;
     }
 
-    header {
-      text-align: center;
-    }
-
     .description {
       font-size: 1.3em;
       max-width: 30rem;
@@ -83,8 +95,13 @@
       font-size: 0.8rem;
     }
 
+    .summary {
+      margin-top: 5em;
+      text-align: left;
+    }
+
     .read-more {
-      margin-top: 2rem;
+      margin-top: 5rem;
       display: block;
     }
 
@@ -118,16 +135,10 @@
       -webkit-transform: scale(2);
       -moz-transform: scale(2);
     }
-
-    section {
-      margin-top: 3rem;
-      max-width: 40rem;
-      margin: 0 auto;
+    .tech-stack li {
+      display: inline;
     }
 
-    ul {
-      list-style-type: none;
-    }
 
     @media print {
       html {
@@ -172,19 +183,20 @@
       <a class="printable" target="_blank" href="https://medium.com/@oleg008">Medium</a>
       <a class="printable" target="_blank" href="https://facebook.com/oleg.slobodskoi">Facebook</a>
     </div>
+    <section class="summary">
+      I am a front-end focused engineer with back-end experience.<br /><br />
+      I love working on high-impact UI performance optimizations. My favorite type of optimization
+      though is Architecture, because of how it impacts the entire organization.
+      Architecture is what lets organizations collaborate and scale as well as optimize local performance.<br /><br />
+      I value readability and maintainability, because nothing makes me happier than making the future engineers enjoy working with my code because of its meaningful semantics, ease of change and removal as well as testability.<br /><br />
+      I like to work on tools, which improve the Developer Experience and that is why I invest in Open Source regularly.
+    </section>
     <a href="" class="read-more">Read more…</a>
   </header>
   <a class="surface contact"></a>
 
   <div class="cv collapsed">
-    <section>
-      <h2>Summary</h2>
-      During my career, I gained experience in both Front-End and Back-end technologies. I did a lot of research in JavaScript performance, rendering and GPU accelerated animations.
-      I understand horizontally scalable stateful and stateless architectures, microservices, REST, RPC, GraphQL, but I keep coming back to enjoying building UIs.<br />
-      I value readability and maintainability the most! Nothing makes me happier than making the future engineers enjoy working with my code because of its meaningful semantics, ease of change and removal as well as testability.<br /><br />
-      I like to work on tools, which improve the Developer Experience and that is why I invest in Open Source regularly.
-    </section>
-    <section>
+    <section class="tech-stack">
       <h2>Tech Stack</h2>
       <ul>
         <li><a target="_blank" href="https://facebook.github.io/react/">React</a></li>
@@ -199,7 +211,7 @@
         <li><a target="_blank" href="https://nodejs.org">Node.js</a></li>
         <li><a target="_blank" href="https://MongoDB.org">MongoDB</a></li>
         <li><a target="_blank" href="https://cypress.io/">Cypress</a></li>
-        <li>and many more …</li>
+        <li>and more …</li>
       </ul>
     </section>
     <section>
@@ -228,7 +240,7 @@
     <section>
       <h2>Professional Experience</h2>
 
-      <h3>01.10.2018 - present, <a class="printable" target="_blank" href="https://webflow.com/">Webflow</a></h3>
+      <h3>01.10.2018 - present | <a class="printable" target="_blank" href="https://webflow.com/">Webflow</a></h3>
       <h4>Senior JavaScript Engineer</h4>
 
       Webflow is a tool for designers and makers that allows them to build a fully custom production-ready site that includes the designer, CMS, E-Commerce, and more.
@@ -238,7 +250,7 @@
       users to reuse elements on the canvas across the project on a new level, slowly turning Webflow Designer into a platform where Freelancers and Organizations can
       offer reusable components to 3rd parties.
 
-      <h3>01.04.2018 - 31.08.2018, <a class="printable" target="_blank" href="https://ebaytech.berlin/">Ebay
+      <h3>01.04.2018 - 31.08.2018 | <a class="printable" target="_blank" href="https://ebaytech.berlin/">Ebay
           Classifieds MoVe</a></h3>
       <h4>Software Architect JavaScript</h4>
 
@@ -248,7 +260,7 @@
       During that time I managed to introduce a new "Feature Driven Architecture" to the teams, wrote a number of
       ADRs and articles, created POCs for the architecture and GraphQL API Gateway.
 
-      <h3>01.02.2015 - 01.02.2018, <a class="printable" target="_blank" href="https://chatgrape.com">Chatgrape</a></h3>
+      <h3>01.02.2015 - 01.02.2018 | <a class="printable" target="_blank" href="https://chatgrape.com">Chatgrape</a></h3>
       <h4>Lead Front-End Engineer</h4>
 
       Smart messaging for big businesses.<br />
@@ -262,7 +274,7 @@
       on Windows as well as on MacOS thanks to Electron. Also, it has an installer for Windows. It performs well
       and has low maintenance footprint.
 
-      <h3>11.2013 - 09.2014, <a class="printable" target="_blank" href="https://kiipost.com">Kiipost</a></h3>
+      <h3>11.2013 - 09.2014 | <a class="printable" target="_blank" href="https://kiipost.com">Kiipost</a></h3>
       <h4>Founder, Software Engineer</h4>
 
       Kiipost is a mobile app which allows users to stay in the know about relevant updates, highly related to
@@ -281,7 +293,7 @@
 
       Tried, failed, learned.
 
-      <h3>12.2011 - 10.2013, <a class="printable" target="_blank" href="https://skim.com">Skim</a></h3>
+      <h3>12.2011 - 10.2013 | <a class="printable" target="_blank" href="https://skim.com">Skim</a></h3>
       <h4>Software Engineer</h4>
 
       Created the backend service as well as web Front-End. Backend is done on top of Heroku's stateless
@@ -296,7 +308,7 @@
       Skim connects you with people around you. If the interest is mutual, we let you know on the spot. Life's a
       game – level up!
 
-      <h3>10.2011 - 11.2011, <a class="printable" target="_blank" href="https://audiencescience.com">AudienceScience</a></h3>
+      <h3>10.2011 - 11.2011 | <a class="printable" target="_blank" href="https://audiencescience.com">AudienceScience</a></h3>
       <h4>UX Engineer</h4>
 
       Refactored the UI for campaigns creation. Reduced amount of code by factor 2.<br /><br />
@@ -305,14 +317,14 @@
       transparent, and from wasteful to extremely efficient, all with the goal of generating the best digital
       advertising performance for the advertiser, and the consumer.
 
-      <h3>11.2010 - 09.2011, Stealth mode startup</h3>
+      <h3>11.2010 - 09.2011 | Stealth mode startup</h3>
       <h4>Founder, full stack Software Engineer</h4>
 
       Tried. Failed to build a team. Learned a lot.<br />
       Used Node.js, MongoDB, Backbone, jQuery.
 
-      <h3>10.2008 - 10.2010, <a class="printable" target="_blank" href="https://jimdo.com">Jimdo</a></h3>
-      <h4>JavaScript Engineer.</h4>
+      <h3>10.2008 - 10.2010 | <a class="printable" target="_blank" href="https://jimdo.com">Jimdo</a></h3>
+      <h4>JavaScript Engineer</h4>
       I was leading the company's Front-End development, created the complete architecture, dozens of high
       quality and high performance jQuery plugins. It was a challenging job because the company was growing very
       fast (from 500k to 3mio users). Within 2 years I have completely refactored the old code base, ported it
@@ -323,25 +335,19 @@
       knowledge, everyone can create a place on the Internet – complete with online store, blog, photo galleries,
       YouTube videos and much more.
 
-      <h3>01.2008 - 10.2008, <a class="printable" target="_blank" href="https://mandarin-medien.de">Mandarin
+      <h3>01.2008 - 10.2008 | <a class="printable" target="_blank" href="https://mandarin-medien.de">Mandarin
           Medien</a></h3>
-      <h4>Front-End developer.</h4>
+      <h4>Front-End developer</h4>
       I was developing high performance UI components as jQuery plugins using JavaScript, CSS, HTML for company's
       own CMS. To name a few: Filemanager, WindowEngine, Tree, Tooltip, Lightbox, Image Cropper.
 
-      <h3>01.2006 - 11.2007, <a target="_blank" href="https://mandarin-medien.de">Mandarin Medien</a></h3>
-      <h4>Web developer.</h4>
+      <h3>01.2006 - 11.2007 | <a target="_blank" href="https://mandarin-medien.de">Mandarin Medien</a></h3>
+      <h4>Web developer</h4>
       I was developing cross platform middle-sized projects using PHP, Smarty, MySql, HTML, CSS, JavaScript. Most
       of those projects are backed by the company's own CMS.<br /><br />
 
       Mandarin Medien is a full-service web agency.
 
-    </section>
-    <section>
-      <h2>Education</h2>
-
-      <h3>08.2006 - 05.2008, <a target="_blank" href="http://haw-hamburg.de">HAW Hamburg</a></h3>
-      Media Systems, Bachelor.
     </section>
     <section>
       <h2>Languages</h2>
