@@ -19,8 +19,11 @@
       }
 
       body {
-        margin: 10%;
-        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        padding-top: 3em;
       }
 
       a {
@@ -569,9 +572,12 @@
       (function () {
         document
           .getElementsByClassName("read-more")[0]
-          .addEventListener("click", function (e) {
-            e.preventDefault();
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            const header = document.querySelector("header");
+            const { offsetTop } = header;
             document.body.classList.remove("collapsed");
+            header.style.marginTop = offsetTop;
           });
       })();
 
