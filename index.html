@@ -665,8 +665,8 @@
           .getElementsByClassName("read-more")[0]
           .addEventListener("click", function (event) {
             event.preventDefault();
-            const header = document.querySelector("header");
-            const { offsetTop } = header;
+            var header = document.querySelector("header");
+            var offsetTop = header.offsetTop;
             document.body.classList.remove("collapsed");
             header.style.marginTop = offsetTop;
           });
