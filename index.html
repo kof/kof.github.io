@@ -11,21 +11,17 @@
           Geneva;
         font-size: 16px;
         line-height: 1.6;
-        color: rgba(0, 0, 0, 0.6);
+        color: rgba(0, 0, 0, 0.7);
         margin: 0;
         -webkit-touch-callout: none;
       }
 
       body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 100vh;
         padding-top: 3em;
       }
 
       a {
-        color: rgba(0, 0, 0, 0.6);
+        color: rgba(0, 0, 0, 0.7);
         font-weight: normal;
       }
 
@@ -74,7 +70,9 @@
       header {
         text-align: center;
       }
-
+      figure {
+        margin-block: 2.1rem;
+      }
       blockquote {
         font-style: italic;
         margin-inline: 0;
@@ -169,9 +167,9 @@
         header {
           page-break-after: always;
         }
-        article {
-          page-break-before: auto;
-          page-break-inside: avoid;
+        li,
+        p {
+          break-inside: avoid;
         }
         .collapsed .cv {
           display: block;
@@ -238,17 +236,20 @@
         >
       </div>
       <section class="summary">
-        I am a front-end focused engineer with back-end experience.<br /><br />
-        I love working on high-impact UI performance optimizations. My favorite
-        type of work though is Architecture, because of how it impacts the
-        entire organization. Architecture is what lets organizations collaborate
-        and scale as well as optimize local performance.<br /><br />
-        I value readability and maintainability, because nothing makes me
-        happier than making the future engineers enjoy working with my code
-        because of its meaningful semantics, ease of change and removal as well
-        as testability.<br /><br />
-        I like to work on tools, which improve the Developer Experience and that
-        is why I invest in Open Source.
+        <p>
+          I am a front-end focused engineer with back-end experience.<br /><br />
+          I love working on high-impact UI performance optimizations. My
+          favorite type of work though is Architecture, because of how it
+          impacts the entire organization. Architecture is what lets
+          organizations collaborate and scale as well as optimize local
+          performance.<br /><br />
+          I value readability and maintainability, because nothing makes me
+          happier than making the future engineers enjoy working with my code
+          because of its meaningful semantics, ease of change and removal as
+          well as testability.<br /><br />
+          I like to work on tools, which improve the Developer Experience and
+          that is why I invest in Open Source.
+        </p>
       </section>
       <a href="" class="read-more" rel="noopener">Read more…</a>
     </header>
@@ -415,14 +416,14 @@
           </h3>
           <h4>Senior JavaScript Engineer</h4>
 
-          Webflow is a tool for designers and makers that allows them to build a
-          fully custom production-ready site that includes the designer, CMS,
-          E-Commerce, and more.
-          <br /><br />
-          My area is the designer. I was part of the engineering team building
-          the UI that customers use to design their site.
-          <br /><br />
-
+          <p>
+            Webflow is a tool for designers and makers that allows them to build
+            a fully custom production-ready site that includes the designer,
+            CMS, E-Commerce, and more. <br /><br />
+            My area is the designer. I was part of the engineering team building
+            the UI that customers use to design their site.
+            <br /><br />
+          </p>
           <h4 id="webflow-achievements">Achievements</h4>
           <ul style="list-style-type: '- '">
             <li>
@@ -446,13 +447,16 @@
               </figure>
             </li>
             <li>
-              I refactored and migrated the synchronization logic for CSS in the
-              designer. It was inconsistently serialized, deserialized, and
-              modified during loading and saving phases. It was challenging
-              because hundreds of thousands of sites were using differently
-              generated CSS because of the changes introduced to the designer. I
-              have managed to migrate the pre- and post-processing logic while
-              making sure no site has been affected.
+              <p>
+                I refactored and migrated the synchronization logic for CSS in
+                the designer. It was inconsistently serialized, deserialized,
+                and modified during loading and saving phases. It was
+                challenging because hundreds of thousands of sites were using
+                differently generated CSS because of the changes introduced to
+                the designer. I have managed to migrate the pre- and
+                post-processing logic while making sure no site has been
+                affected.
+              </p>
               <figure>
                 <blockquote>
                   <p>
@@ -536,14 +540,15 @@
             >
           </h3>
           <h4>Software Architect JavaScript</h4>
-
-          MoVe is a secret new Ebay Classifieds Motors Vertical company.<br /><br />
-          My role is to align 4 Web Front-End teams with architectural choices
-          and ensure the quality while moving fast and aligned with the release
-          plan.<br />
-          During that time I managed to introduce a new "Feature Driven
-          Architecture" to the teams, wrote a number of ADRs and articles,
-          created POCs for the architecture and GraphQL API Gateway.
+          <p>
+            MoVe is a secret new Ebay Classifieds Motors Vertical company.<br /><br />
+            My role is to align 4 Web Front-End teams with architectural choices
+            and ensure the quality while moving fast and aligned with the
+            release plan.<br />
+            During that time I managed to introduce a new "Feature Driven
+            Architecture" to the teams, wrote a number of ADRs and articles,
+            created POCs for the architecture and GraphQL API Gateway.
+          </p>
         </article>
         <article>
           <h3>
@@ -557,22 +562,25 @@
             >
           </h3>
           <h4>Lead Front-End Engineer</h4>
+          <p>
+            Smart messaging for big businesses.<br />
+            Secure enterprise communication with integrations for all business
+            services. On-premise or in the cloud. <br /><br />
 
-          Smart messaging for big businesses.<br />
-          Secure enterprise communication with integrations for all business
-          services. On-premise or in the cloud. <br /><br />
-
-          The web application is built using technologies like React/Redux, JSS
-          and Electron. It uses a fully virtualized messages history rendering
-          by leveraging
-          <a href="https://github.com/bvaughn/react-virtualized" rel="noopener"
-            >react-virtualized</a
-          >
-          and though it provides a truly infinite scrolling on the web platform.
-          Application is fully decoupled through React components, Redux and
-          JSS. It works like a native application on Windows as well as on MacOS
-          thanks to Electron. Also, it has an installer for Windows. It performs
-          well and has low maintenance footprint.
+            The web application is built using technologies like React/Redux,
+            JSS and Electron. It uses a fully virtualized messages history
+            rendering by leveraging
+            <a
+              href="https://github.com/bvaughn/react-virtualized"
+              rel="noopener"
+              >react-virtualized</a
+            >
+            and though it provides a truly infinite scrolling on the web
+            platform. Application is fully decoupled through React components,
+            Redux and JSS. It works like a native application on Windows as well
+            as on MacOS thanks to Electron. Also, it has an installer for
+            Windows. It performs well and has low maintenance footprint.
+          </p>
         </article>
         <article>
           <h3>
@@ -586,32 +594,34 @@
             >
           </h3>
           <h4>Founder, Software Engineer</h4>
+          <p>
+            Kiipost is a mobile app which allows users to stay in the know about
+            relevant updates, highly related to things they share online.<br /><br />
+            I worked on an MVP, a mobile app built with
+            <a target="_blank" href="https://famo.us" rel="noopener">famo.us</a
+            >. The app is working cross platform, it is fully responsive on the
+            level of native apps.<br /><br />
+            My Back-end aggregates 30k RSS feeds to provide updates to the user.
+            I have created a tool called "extractor", which provides
+            functionality similar to
+            <a href="http://embed.ly/extract" rel="noopener">embedly</a>.
+            Backend is written using latest Node.js version, leveraging
+            generators.<br />
+            I use twitter API to access users tweets. I analyze users links,
+            extract keywords, entities and images, I use readability algorithm
+            to extract the right content. I created an algorithm to extract the
+            most important keywords from articles.<br /><br />
 
-          Kiipost is a mobile app which allows users to stay in the know about
-          relevant updates, highly related to things they share online.<br /><br />
-          I worked on an MVP, a mobile app built with
-          <a target="_blank" href="https://famo.us" rel="noopener">famo.us</a>.
-          The app is working cross platform, it is fully responsive on the level
-          of native apps.<br /><br />
-          My Back-end aggregates 30k RSS feeds to provide updates to the user. I
-          have created a tool called "extractor", which provides functionality
-          similar to
-          <a href="http://embed.ly/extract" rel="noopener">embedly</a>. Backend
-          is written using latest Node.js version, leveraging generators.<br />
-          I use twitter API to access users tweets. I analyze users links,
-          extract keywords, entities and images, I use readability algorithm to
-          extract the right content. I created an algorithm to extract the most
-          important keywords from articles.<br /><br />
+            <a
+              class="printable"
+              target="_blank"
+              href="https://github.com/kof/kiipost"
+              rel="noopener"
+              >I have open sourced the code of this projects</a
+            ><br /><br />
 
-          <a
-            class="printable"
-            target="_blank"
-            href="https://github.com/kof/kiipost"
-            rel="noopener"
-            >I have open sourced the code of this projects</a
-          ><br /><br />
-
-          Tried, failed, learned.
+            Tried, failed, learned.
+          </p>
         </article>
         <article>
           <h3>
@@ -625,21 +635,23 @@
             >
           </h3>
           <h4>Software Engineer</h4>
+          <p>
+            Created the backend service as well as web Front-End. Backend is
+            done on top of Heroku's stateless infrastructure. It provides HTTP
+            API for the web and mobile Front-End for Android and iOS. I used
+            Node.js and MongoDB on the backend, backbone, jQuery and lots of
+            other libraries on Front-End. Some of the challenging tasks were:
+            scalable candidates calculation, real-time communication, Facebook
+            integration, horizontal scale and constantly changing
+            requirements.<br /><br />
 
-          Created the backend service as well as web Front-End. Backend is done
-          on top of Heroku's stateless infrastructure. It provides HTTP API for
-          the web and mobile Front-End for Android and iOS. I used Node.js and
-          MongoDB on the backend, backbone, jQuery and lots of other libraries
-          on Front-End. Some of the challenging tasks were: scalable candidates
-          calculation, real-time communication, Facebook integration, horizontal
-          scale and constantly changing requirements.<br /><br />
+            I was the first employee of this new social dating platform. Our
+            vision was to create a platform where people learn each other in a
+            playful way, with no shame to share it.<br />
 
-          I was the first employee of this new social dating platform. Our
-          vision was to create a platform where people learn each other in a
-          playful way, with no shame to share it.<br />
-
-          Skim connects you with people around you. If the interest is mutual,
-          we let you know on the spot. Life's a game – level up!
+            Skim connects you with people around you. If the interest is mutual,
+            we let you know on the spot. Life's a game – level up!
+          </p>
         </article>
         <article>
           <h3>
@@ -653,14 +665,16 @@
             >
           </h3>
           <h4>UX Engineer</h4>
+          <p>
+            Refactored the UI for campaigns creation. Reduced amount of code by
+            factor 2.<br /><br />
 
-          Refactored the UI for campaigns creation. Reduced amount of code by
-          factor 2.<br /><br />
-
-          AudienceScience is transforming digital advertising from complex to
-          simple, from murky to fully transparent, and from wasteful to
-          extremely efficient, all with the goal of generating the best digital
-          advertising performance for the advertiser, and the consumer.
+            AudienceScience is transforming digital advertising from complex to
+            simple, from murky to fully transparent, and from wasteful to
+            extremely efficient, all with the goal of generating the best
+            digital advertising performance for the advertiser, and the
+            consumer.
+          </p>
         </article>
         <article>
           <h3>
@@ -674,9 +688,10 @@
             >
           </h3>
           <h4>Founder, full stack Software Engineer</h4>
-
-          Tried. Failed to build a team. Learned a lot.<br />
-          Used Node.js, MongoDB, Backbone, jQuery.
+          <p>
+            Tried. Failed to build a team. Learned a lot.<br />
+            Used Node.js, MongoDB, Backbone, jQuery.
+          </p>
         </article>
         <article>
           <h3>
@@ -690,19 +705,21 @@
             >
           </h3>
           <h4>JavaScript Engineer</h4>
-          I was leading the company's Front-End development, created the
-          complete architecture, dozens of high quality and high performance
-          jQuery plugins. It was a challenging job because the company was
-          growing very fast (from 500k to 3mio users). Within 2 years I have
-          completely refactored the old code base, ported it from prototype.js
-          to jQuery, did a huge amount of load and runtime performance
-          optimizations.
+          <p>
+            I was leading the company's Front-End development, created the
+            complete architecture, dozens of high quality and high performance
+            jQuery plugins. It was a challenging job because the company was
+            growing very fast (from 500k to 3mio users). Within 2 years I have
+            completely refactored the old code base, ported it from prototype.js
+            to jQuery, did a huge amount of load and runtime performance
+            optimizations.
 
-          <br /><br />
-          Jimdo offers a free website creator that anyone can use. In just a few
-          minutes and without any technical knowledge, everyone can create a
-          place on the Internet – complete with online store, blog, photo
-          galleries, YouTube videos and much more.
+            <br /><br />
+            Jimdo offers a free website creator that anyone can use. In just a
+            few minutes and without any technical knowledge, everyone can create
+            a place on the Internet – complete with online store, blog, photo
+            galleries, YouTube videos and much more.
+          </p>
         </article>
         <article>
           <h3>
@@ -716,9 +733,11 @@
             >
           </h3>
           <h4>Front-End developer</h4>
-          I was developing high performance UI components as jQuery plugins
-          using JavaScript, CSS, HTML for company's own CMS. To name a few:
-          Filemanager, WindowEngine, Tree, Tooltip, Lightbox, Image Cropper.
+          <p>
+            I was developing high performance UI components as jQuery plugins
+            using JavaScript, CSS, HTML for company's own CMS. To name a few:
+            Filemanager, WindowEngine, Tree, Tooltip, Lightbox, Image Cropper.
+          </p>
         </article>
         <article>
           <h3>
@@ -728,11 +747,12 @@
             >
           </h3>
           <h4>Web developer</h4>
-          I was developing cross platform middle-sized projects using PHP,
-          Smarty, MySql, HTML, CSS, JavaScript. Most of those projects are
-          backed by the company's own CMS.
-          <br /><br />
-          Mandarin Medien is a full-service web agency.
+          <p>
+            I was developing cross platform middle-sized projects using PHP,
+            Smarty, MySql, HTML, CSS, JavaScript. Most of those projects are
+            backed by the company's own CMS. <br /><br />
+            Mandarin Medien is a full-service web agency.
+          </p>
         </article>
       </section>
       <section>
