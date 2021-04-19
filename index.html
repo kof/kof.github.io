@@ -75,6 +75,20 @@
         text-align: center;
       }
 
+      blockquote {
+        font-style: italic;
+        margin-inline: 0;
+      }
+      blockquote p::before {
+        content: "\201C";
+      }
+      blockquote p::after {
+        content: "\201D";
+      }
+      figcaption {
+        text-align: right;
+      }
+
       .surface {
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
@@ -179,7 +193,7 @@
     </style>
   </head>
 
-  <body class="collapsed">
+  <body>
     <a class="surface contact" rel="noopener"></a>
     <header>
       <img
@@ -390,11 +404,11 @@
         <h2>Professional Experience</h2>
         <article>
           <h3>
-            Dec 2018 - Present |
+            Dec 2018 - Apr 2021 |
             <a
+              href="https://webflow.com"
               class="printable"
               target="_blank"
-              href="https://webflow.com"
               rel="noopener"
               >Webflow</a
             >
@@ -405,14 +419,110 @@
           fully custom production-ready site that includes the designer, CMS,
           E-Commerce, and more.
           <br /><br />
-          My area is the designer. I am part of the engineering team building
-          the UI that customers use to design their site. I worked on the Style
-          Engine behind the designer that is responsible for styling elements on
-          the canvas as well as producing production-ready CSS. Currently, I am
-          working on the componentization effort that allows users to reuse
-          elements on the canvas across the project on a new level, slowly
-          turning Webflow Designer into a platform where Freelancers and
-          Organizations can offer reusable components to 3rd parties.
+          My area is the designer. I was part of the engineering team building
+          the UI that customers use to design their site.
+          <br /><br />
+
+          <h4 id="webflow-achievements">Achievements</h4>
+          <ul style="list-style-type: '- '">
+            <li>
+              I laid the foundation of flow types in the style system. Webflow
+              has adopted
+              <a href="https://flow.org/" target="_blank" rel="noopener"
+                >flow type</a
+              >
+              retrospectively and my task was to define types for the existing
+              style system.
+              <figure>
+                <blockquote>
+                  <p>
+                    The type safety of the style system is now one of the best
+                    parts of the product. While it still isn't sound, changing
+                    types can inform an engineer of many of the call sites
+                    necessary to rectify.
+                  </p>
+                </blockquote>
+                <figcaption>—Dustan Kasten, Engineering Manager</figcaption>
+              </figure>
+            </li>
+            <li>
+              I refactored and migrated the synchronization logic for CSS in the
+              designer. It was inconsistently serialized, deserialized, and
+              modified during loading and saving phases. It was challenging
+              because hundreds of thousands of sites were using differently
+              generated CSS because of the changes introduced to the designer. I
+              have managed to migrate the pre- and post-processing logic while
+              making sure no site has been affected.
+              <figure>
+                <blockquote>
+                  <p>
+                    Removing "styleText" was legit a big deal. Be proud of that!
+                    That has been looked at with closed- eyes by so many
+                    engineers over the years. Also, while it had a clear end
+                    goal, there wasn't much pre-defined on what to do, and you
+                    navigated a poorly lit tunnel to shut it off and learned a
+                    lot about our data integrity and a portion of our patching
+                    system along the way!
+                  </p>
+                </blockquote>
+                <figcaption>—Dustan Kasten, Engineering Manager</figcaption>
+              </figure>
+            </li>
+            <li>
+              I built parts of the new Style Engine as part of the Style System
+              effort that is powering today local and default styles rendering
+              on the canvas and server-side rendered atoms styles.
+            </li>
+            <li>
+              I lead the Distributed Architecture Pre-Brief. It's goal was to
+              discuss and formalize architectural problems and potential
+              solutions in the entire organization. We have collaboratively
+              created a high-quality, concise document that laid a foundation
+              for the roadmap for the years to come.
+            </li>
+            <li>
+              I have created several pull requests with proof of concepts for
+              the CSS-in-JS solution Webflow could use to build it's Designer
+              UI.
+            </li>
+            <li>
+              I created 2 RFC documents that encode patterns for optimizing
+              performance, which will hopefully help shape the culture around
+              performance and align the engineering with those specific ideas.
+            </li>
+            <li>
+              I was part of the Larger Breakpoints effort, which was quite a
+              heavy refactoring of our breakpoints logic. We have unified the
+              logic handling breakpoints across the entire designer, making it
+              consistent, type-safe, easier to understand, and prepared for the
+              next potential step - custom breakpoints.
+            </li>
+            <li>
+              I built "Isolation Mode" - a feature that would allow users to
+              view a single component in isolation. It is a big deal for complex
+              sites, where working on one particularly complex element in
+              isolation reduces cognitive load and creates clarity.
+            </li>
+            <li>
+              I have been part of the componentization effort, fixing various
+              bugs with nested symbols (components). In particular, I have been
+              fixing a lot of bugs related to isolation mode and nestability.
+            </li>
+            <li>
+              I mentored several engineers, including senior engineers, by
+              providing meaningful, in-depth explanations in Pull Requests and
+              pair programming with them in real-time.
+            </li>
+            <li>
+              I made it my responsibility to increase test coverage and types
+              coverage in every code area I touched myself or reviewed as a Pull
+              Request.
+            </li>
+            <li>
+              I actively tackled technical debts by making them transparent
+              through documentation and bringing them up in the sprint planning.
+            </li>
+          </ul>
         </article>
         <article>
           <h3>
@@ -659,7 +769,14 @@
         });
       })();
 
-      // Read more click.
+      // When URL contains hash, don't collaps the content and let the browser
+      // scroll to the id.
+      (function () {
+        if (location.hash !== "") return;
+        document.body.classList.add("collapsed");
+      })();
+
+      // Click on "Read more" link.
       (function () {
         document
           .getElementsByClassName("read-more")[0]
